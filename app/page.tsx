@@ -27,10 +27,9 @@ interface Song {
 }
 
 async function fetchSong() {
-  // i know that no-cache and revalidate should not be used together, but without them it doesn't work as i want
   const song: Song | "no data" = await fetch(
     `https://api.lanyard.rest/v1/users/964086735422230538`,
-    { next: { revalidate: 15 }, cache: "no-cache" }
+    { cache: "no-cache" }
   )
     .then(async (res) => await res.json())
     .then((data) => {
