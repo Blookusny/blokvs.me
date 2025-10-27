@@ -16,6 +16,15 @@ const nextConfig = {
       }
     ],
   },
+  redirects: () => {
+    return [
+      {
+        source: '/extern',
+        destination: 'https://extern.vercel.app/',
+        permanent: true
+      }
+    ]
+  }
 };
 
 export default nextConfig;
