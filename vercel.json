@@ -2,6 +2,6 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     { "source": "/extern", "destination": "https://extern.vercel.app/" },
-    { "source": "/extern/:path", "destination": "https://extern.vercel.app/:path" }
+    { "source": "/extern/:path*", "destination": "https://extern.vercel.app/:path*" }
   ]
 }
